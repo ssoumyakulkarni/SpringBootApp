@@ -28,3 +28,11 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile("junit:junit")
 }
+
+test {     
+ useTestNG() {      
+      useDefaultListeners = true      
+      suiteXmlFilesm << new File("src/test/resources/testngSampleTest.xml")         
+      setSuiteXmlFiles(suiteXmlFiles)    
+    }
+}
